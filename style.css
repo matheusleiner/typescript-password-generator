@@ -1,0 +1,154 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, lightpink, lightblue, skyblue, lightyellow);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 50%);
+    width: 100vh;
+    height: 100vh;
+    overflow: auto;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px 0 15px 0;
+}
+
+output {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 50%);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgb(200, 200, 200);
+    margin-bottom: 10px;
+}
+
+output > span {
+    max-width: 90%;
+    overflow-x: scroll;
+    scrollbar-width: 0px;
+    text-wrap: nowrap;
+}
+
+output > span::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+output > button {
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+form > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+button {
+    border: none;
+    padding: 0;
+}
+
+form > button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, lightpink, lightblue, skyblue, lightyellow);
+}
+
+input {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        max-width: 400px;
+        max-height: 500px;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+/* switch input css */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111a36;
+    transition: 0.3s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+    background-color: #4a6cf7;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+.switch input:disabled + .slider {
+    background-color: #cfcfcf;
+    cursor: not-allowed;
+}
