@@ -45,7 +45,7 @@ output {
 output > span {
     max-width: 90%;
     overflow-x: scroll;
-    scrollbar-width: 0px;
+    scrollbar-width: none;
     text-wrap: nowrap;
 }
 
